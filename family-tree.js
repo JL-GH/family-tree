@@ -21,6 +21,9 @@ class FamilyTree {
   }
 
   findMember(name) {
+    if (name === this.value) {
+      return this
+    }
     for (let i = 0; i < this.children.length; i++) {
       let elem = this.children[i]
       if(elem.value === name) {
